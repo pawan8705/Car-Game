@@ -1,0 +1,86 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.sky,
+.grass,
+.road {
+    width: 10000%;
+}
+
+.sky {
+    height: 100vh;
+    background: url(Assets/sky.jpg);
+    animation: ani-road linear 40s infinite;
+}
+
+.grass,
+.road,
+.car {
+    position: absolute;
+}
+
+.grass {
+    bottom: 14vh;
+    height: 96vh;
+    background: url(Assets/trees.png);
+    animation: ani-road linear 20s infinite;
+}
+
+.road {
+    top: 79vh;
+    height: 40vh;
+    background-image: url(Assets/road.png);
+    animation: ani-road linear 10s infinite;
+}
+
+.car {
+    height: 13vh;
+    width: 45vh;
+    background: url(Assets/car.png) no-repeat;
+    background-size: cover;
+    bottom: 16vh;
+    left: 15vw;
+}
+
+.tier-1,
+.tier-2 {
+    height: 7vh;
+    width: 9vh;
+    position: relative;
+    background: url(Assets/wheal.png) no-repeat;
+    background-size: cover;
+    animation: ani-wheal linear .6s infinite;
+}
+
+.tier-1 {
+    top: 5.5vh;
+    left: 2.8vh;
+}
+
+.tier-2 {
+    top: -1.2vh;
+    left: 30.3vh;
+}
+
+@keyframes ani-wheal {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ani-road {
+    100% {
+        transform: translateX(-500vw);
+    }
+}
